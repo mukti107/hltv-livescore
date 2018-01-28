@@ -24,12 +24,12 @@ This module is based on [@Nols1000](https://github.com/Nols1000)'s [original ver
 
 **Install with npm:**
 ```bash
-$ npm install hltv-livescore
+$ npm install hltv-livescore-rh
 ```
 
 **Usage:**
 ```javascript
-var Livescore = require('hltv-livescore');
+var Livescore = require('hltv-livescore-rh');
 var live = new Livescore({
     listid: 2299033
 });
@@ -44,8 +44,8 @@ live.on('kill', function(data) {
 ### Constructor([options])
 - `options` - An optional object containing some of the following options
     - `listid` - The game's listid
-    - `url` - The URL to listen on. Defaults to `http://scorebot2.hltv.org`
-    - `port` - The port to listen on. Defaults to `10022`
+    - `url` - The URL to listen on. Defaults to `https://scorebot-secure.hltv.org`
+    - `port` - The port to listen on. Defaults to `443`
 
 Constructs a new `Livescore`. You will be automatically connected to the HLTV scorebot server. The game with the specified `listid` will be automatically started if provided. If not provided, you must specify them using them using the `start()` method.
 
